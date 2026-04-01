@@ -32,9 +32,3 @@ class Router{
     }
     
 }
-
-enum Route: Hashable, Sendable {
-    case dash
-    case detail
-    case settings
-}

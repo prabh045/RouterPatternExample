@@ -23,6 +23,8 @@ struct RouterPatternApp: App {
                             DetailScreen()
                         case .settings:
                             SettingsScreen()
+                        case .invalidDestination:
+                            InvalidDestinationScreen()
                         }
                 }
             }
