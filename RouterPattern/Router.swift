@@ -8,20 +8,26 @@
 import Combine
 import SwiftUI
 
-class Router: ObservableObject {
-    @Published var path = NavigationPath()
+@Observable
+class Router{
+    var path = NavigationPath()
     static let shared = Router()
     private init() {}
     
-    func navigate(to route: Route) {
+    func navigate(by destination: RouterDestination) {
+        let route = destination.getRoute()
+        navigate(to: route)
+    }
+    
+    private func navigate(to route: Route) {
         path.append(route)
     }
     
-    func navigateBack() {
+    private func navigateBack() {
         path.removeLast()
     }
     
-    func getPathValue() -> NavigationPath {
+    private func getPathValue() -> NavigationPath {
         return path
     }
     

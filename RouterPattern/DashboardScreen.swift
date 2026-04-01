@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct DashboardScreen: View {
-    
     var body: some View {
         VStack {
             Text("I am Dashboard")
             Button {
-                Router.shared.navigate(to: .settings)
+                Router.shared.navigate(by: .init())
             } label: {
                 Text("Go To Settings")
             }
@@ -21,6 +20,7 @@ struct DashboardScreen: View {
         }
     }
 }
+
 
 #Preview {
     DashboardScreen()
