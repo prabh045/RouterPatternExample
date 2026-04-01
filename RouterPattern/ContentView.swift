@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        DashboardScreen()
+        DashboardScreen(viewModel: DIContainer.shared.resolve(type: DashboardViewModel.self) ?? .init(title: "Invalid", destination: .init(destinationId: "invalid")))
     }
 }
 

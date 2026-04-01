@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RouterDestination {
+struct RouterDestination: Identifiable {
     let id = UUID()
     let destinationId: String
     
@@ -30,5 +30,4 @@ enum Route: Hashable, Sendable {
     case detail
     case settings
     case invalidDestination
-    
 }
